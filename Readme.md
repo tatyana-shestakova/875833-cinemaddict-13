@@ -1,7 +1,7 @@
 # Проект «Киноман» [![Build status][travis-image]][travis-url]
 
 * Студент: [Татьяна Шестакова](https://up.htmlacademy.ru/ecmascript/13/user/875833).
-* Наставник: `Неизвестно`.
+* Наставник: [Артём Матковский] (https://htmlacademy.ru/profile/id1151767).
 
 ---
 
