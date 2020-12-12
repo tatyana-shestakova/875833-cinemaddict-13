@@ -1,4 +1,4 @@
-const renderContainerTemplate = () => {
+const createContainerTemplate = () => {
   return `
     <section class="films">
       <section class="films-list">
@@ -28,4 +28,4 @@ const renderContainerTemplate = () => {
   `;
 };
 
-export {renderContainerTemplate};
+export {createContainerTemplate};

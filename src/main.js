@@ -1,10 +1,10 @@
-import {renderCardTemplate} from './view/card';
-import {renderContainerTemplate} from './view/container-card';
-import {renderMenuTemplate} from './view/menu';
-import {renderPopupTemplate} from './view/popup';
-import {renderButtonTemplate} from './view/show-button';
+import {createCardTemplate} from './view/card';
+import {createContainerTemplate} from './view/container-card';
+import {createMenuTemplate} from './view/menu';
+import {createPopupTemplate} from './view/popup';
+import {createButtonTemplate} from './view/show-button';
 import {createStatsFooterTamplate} from './view/stats';
-import {renderStatusTemplate} from './view/status';
+import {createStatusTemplate} from './view/status';
 
 const CARD_COUNT = 5;
 const CARD_COUNT_TOP = 2;
@@ -15,26 +15,26 @@ const render = (container, template, place) => {
 
 const header = document.querySelector(`.header`);
 
-render(header, renderStatusTemplate(), `beforeend`);
+render(header, createStatusTemplate(), `beforeend`);
 
 const main = document.querySelector(`.main`);
 
-render(main, renderMenuTemplate(), `beforeend`);
-render(main, renderContainerTemplate(), `beforeend`);
+render(main, createMenuTemplate(), `beforeend`);
+render(main, createContainerTemplate(), `beforeend`);
 
 const container = document.querySelector(`.films-list`);
 const containerFilm = document.querySelector(`.films-list .films-list__container`);
 const containersTop = document.querySelectorAll(`.films-list--extra .films-list__container`);
 
 for (let i = 0; i < CARD_COUNT; i++) {
-  render(containerFilm, renderCardTemplate(), `beforeend`);
+  render(containerFilm, createCardTemplate(), `beforeend`);
 }
 
-render(container, renderButtonTemplate(), `beforeend`);
+render(container, createButtonTemplate(), `beforeend`);
 
 containersTop.forEach((value) => {
   for (let i = 0; i < CARD_COUNT_TOP; i++) {
-    render(value, renderCardTemplate(), `beforeend`);
+    render(value, createCardTemplate(), `beforeend`);
   }
 });
 
@@ -42,4 +42,4 @@ const footer = document.querySelector(`.footer`);
 
 render(footer, createStatsFooterTamplate(), `beforeend`);
 
-render(footer, renderPopupTemplate(), `afterend`);
+render(footer, createPopupTemplate(), `afterend`);

@@ -1,4 +1,4 @@
-const renderPopupTemplate = () => {
+const createPopupTemplate = () => {
   return `
     <section class="film-details">
       <form class="film-details__inner" action="" method="get">
@@ -172,4 +172,4 @@ const renderPopupTemplate = () => {
   `;
 };
 
-export {renderPopupTemplate};
+export {createPopupTemplate};

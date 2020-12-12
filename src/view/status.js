@@ -1,4 +1,4 @@
-const renderStatusTemplate = () => {
+const createStatusTemplate = () => {
   return `
     <section class="header__profile profile">
       <p class="profile__rating">Movie Buff</p>
@@ -7,4 +7,4 @@ const renderStatusTemplate = () => {
   `;
 };
 
-export {renderStatusTemplate};
+export {createStatusTemplate};
